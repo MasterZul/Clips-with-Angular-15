@@ -12,6 +12,8 @@ import {environment} from "../environments/environment.development";
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {VideoModule} from "./video/video.module";
+import { ClipsComponent } from './clips/clips.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -20,16 +22,18 @@ import {VideoModule} from "./video/video.module";
     AppComponent,
     NavComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ClipsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     UserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    VideoModule
+    VideoModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
